@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function ListContacts(props) {
+const ListContacts = (props) => {
     return (
         <ol className='contact-list'>
             {
@@ -13,7 +13,7 @@ function ListContacts(props) {
                             <p>{contact.name}</p>
                             <p>{contact.email}</p>
                         </div>
-                        <button className='contact-remove'>
+                        <button onClick={() => props.onClickRemoveContact(contact)} className='contact-remove'>
                             Remove
                </button>
                     </li>
